@@ -51,7 +51,7 @@ function parseCSV(text) {
   const idx = key => headers.indexOf(key);
   const iDist = idx("distancia"), iTiempo = idx("tiempo");
   if (iDist===-1||iTiempo===-1)
-    throw new Error(Columnas no encontradas.\nDetectadas: ${headers.join(", ")});
+    throw new Error('Columnas no encontradas.\nDetectadas: ${headers.join(", ")}');
   const iDate=idx("fecha"),iEstilo=idx("estilo"),iCal=idx("calorias"),iEsf=idx("esfuerzo");
   const today = new Date().toISOString().slice(0,10);
   const results = [];
